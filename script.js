@@ -1,3 +1,4 @@
+// Função para processar o link e extrair os IDs
 function processarLink() {
   // 1. Pegar o link do input
   const linkInput = document.getElementById('linkInput');
@@ -22,7 +23,7 @@ function processarLink() {
   // 3. Criar links clicáveis para a página de visualização do produto
   const linksCompletos = ids.map(id => {
       const productId = id.trim();
-      return `<a href="produto.html?id=${productId}" target="_blank">https://go.imvu.com/shop/product-${productId}</a>`;
+      return `<a href="https://go.imvu.com/shop/product-${productId}" target="_blank">https://go.imvu.com/shop/product-${productId}</a>`;
   });
 
   // 4. Exibir os links completos na página
@@ -43,6 +44,7 @@ function processarLink() {
   linkInput.value = '';
 }
 
+// Função para copiar os links para a área de transferência
 function copiarLinks() {
   // 1. Pegar todos os links exibidos
   const idsExtraidosDiv = document.getElementById('idsExtraidos');
