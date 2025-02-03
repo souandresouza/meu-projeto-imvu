@@ -104,3 +104,58 @@ h2 {
   font-size: 14px;
   color: #666;
 }
+
+/* Estilização para a exibição do produto */
+#product-details {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  flex-wrap: wrap;
+}
+
+#product-image {
+  width: 150px;
+  height: auto;
+  border-radius: 8px;
+  transition: transform 0.3s ease-in-out;
+}
+
+#product-image:hover {
+  transform: scale(1.05);
+}
+
+#product-info {
+  flex: 1;
+  min-width: 200px;
+}
+
+#product-name {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #444;
+}
+
+#product-creator,
+#product-price,
+#product-id {
+  font-size: 16px;
+  color: #666;
+  margin: 5px 0;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 600px) {
+  #product-details {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  #product-image {
+    width: 100px;
+  }
+}
