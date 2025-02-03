@@ -1,63 +1,65 @@
 body {
+    background-color: #121212;
+    color: #ffffff;
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
     margin: 0;
     padding: 0;
 }
 
 .container {
-    max-width: 600px;
-    margin: 50px auto;
+    max-width: 800px;
+    margin: 0 auto;
     padding: 20px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+    color: #bb86fc;
     text-align: center;
 }
 
-h1 {
-    color: #333;
-}
-
 .input-group {
+    display: flex;
+    justify-content: center;
     margin-bottom: 20px;
 }
 
 input[type="text"] {
+    width: 60%;
     padding: 10px;
-    width: 70%;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    margin-right: 10px;
+    border: 1px solid #333;
+    border-radius: 5px;
+    background-color: #1e1e1e;
+    color: #ffffff;
+    outline: none;
 }
 
 button {
     padding: 10px 20px;
-    background-color: #007bff;
-    color: #fff;
+    margin-left: 10px;
     border: none;
-    border-radius: 4px;
+    border-radius: 5px;
+    background-color: #bb86fc;
+    color: #ffffff;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: #985fcb;
 }
 
 .resultado, .logs {
-    margin-top: 20px;
-    text-align: left;
+    background-color: #1e1e1e;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
 }
 
-.id-extraido {
-    color: #28a745;
-    font-weight: bold;
+a {
+    color: #bb86fc;
+    text-decoration: none;
 }
 
-.log-success {
-    color: #28a745;
-}
-
-.log-error {
-    color: #dc3545;
+a:hover {
+    text-decoration: underline;
 }
