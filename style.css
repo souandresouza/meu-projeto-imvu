@@ -1,86 +1,106 @@
 body {
-    font-family: 'Segoe UI', sans-serif;
-    background-color: #f9f9f9;
-    color: #333;
-    line-height: 1.6;
-    padding: 20px;
-  }
-  
-  .container {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 20px;
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  h1 {
-    font-size: 24px;
-    font-weight: 400;
-    text-align: center;
-    margin-bottom: 20px;
-    color: #444;
-  }
-  
-  .input-group {
-    display: flex;
-    gap: 10px;
-    margin-bottom: 20px;
-  }
-  
-  input {
-    flex: 1;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    font-size: 16px;
-  }
-  
-  button {
-    padding: 10px 20px;
-    font-size: 16px;
-    background-color: #28a745;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  button:hover {
-    background-color: #218838;
-  }
-  
-  .resultado, .logs {
-    margin-top: 20px;
-  }
-  
-  h2 {
-    font-size: 20px;
-    font-weight: 400;
-    margin-bottom: 10px;
-    color: #555;
-  }
-  
-  #idsExtraidos, #logs {
-    padding: 10px;
-    background-color: #f8f9fa;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-  }
-  
-  #idsExtraidos button {
-    margin-top: 10px;
-    background-color: #007bff;
-  }
-  
-  #idsExtraidos button:hover {
-    background-color: #0056b3;
-  }
-  
-  #logs p {
-    margin: 5px 0;
-    font-size: 14px;
-    color: #666;
-  }
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+  padding: 20px;
+  margin: 0;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  font-size: 24px;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #444;
+}
+
+.input-group {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+input:focus {
+  border-color: #007bff;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #218838;
+}
+
+.resultado, .logs {
+  margin-top: 20px;
+}
+
+h2 {
+  font-size: 20px;
+  font-weight: 400;
+  margin-bottom: 10px;
+  color: #555;
+}
+
+#idsExtraidos, #logs {
+  padding: 10px;
+  background-color: #f8f9fa;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+#idsExtraidos a {
+  display: block;
+  margin-bottom: 10px;
+  color: #007bff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+#idsExtraidos a:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+#idsExtraidos button {
+  margin-top: 10px;
+  background-color: #007bff;
+}
+
+#idsExtraidos button:hover {
+  background-color: #0056b3;
+}
+
+#logs p {
+  margin: 5px 0;
+  font-size: 14px;
+  color: #666;
+}
