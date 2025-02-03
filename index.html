@@ -1,30 +1,33 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Processar Link IMVU</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Extrator de IDs</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="container">
-    <h1>Processar Link IMVU</h1>
-    <div class="input-group">
-      <input type="text" id="linkInput" placeholder="Cole o link aqui" />
-      <button onclick="processarLink()">Processar</button>
+
+    <div class="container">
+        <h1>Extrator de IDs IMVU</h1>
+
+        <div class="input-group">
+            <input type="text" id="inputTexto" placeholder="Cole o link aqui">
+            <button onclick="extrairIDs()">Extrair</button>
+        </div>
+
+        <div class="resultado">
+            <h2>IDs Extraídos</h2>
+            <div id="idsExtraidos"></div>
+        </div>
+
+        <div class="logs">
+            <h2>Logs</h2>
+            <div id="logs"></div>
+        </div>
     </div>
 
-    <div class="resultado">
-      <h2>Links Gerados</h2>
-      <div id="idsExtraidos"></div>
-    </div>
+    <script src="script.js"></script>
 
-    <div class="logs">
-      <h2>Logs</h2>
-      <div id="logs"></div>
-    </div>
-  </div>
-
-  <script src="script.js"></script>
 </body>
 </html>
