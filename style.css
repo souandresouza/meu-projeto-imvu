@@ -1,161 +1,186 @@
-body {
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #f9f9f9;
-  color: #333;
-  line-height: 1.6;
-  padding: 20px;
+/* Reset básico */
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+/* Estilo do corpo */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #121212;
+  color: #E0E0E0;
+  line-height: 1.6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Container principal */
 .container {
   max-width: 600px;
-  margin: 0 auto;
+  width: 100%;
+  background-color: #1E1E1E;
   padding: 20px;
-  background: #fff;
   border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
+/* Título principal */
 h1 {
   font-size: 24px;
-  font-weight: 400;
-  text-align: center;
   margin-bottom: 20px;
-  color: #444;
+  color: #FFD700;
 }
 
+/* Grupos de entrada */
 .input-group {
-  display: flex;
-  gap: 10px;
   margin-bottom: 20px;
 }
 
-input {
-  flex: 1;
+.input-group input[type="text"] {
+  width: calc(100% - 110px);
   padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  font-size: 16px;
-  outline: none;
-  transition: border-color 0.3s ease;
-}
-
-input:focus {
-  border-color: #007bff;
-}
-
-button {
-  padding: 10px 20px;
-  font-size: 16px;
-  background-color: #28a745;
-  color: white;
   border: none;
-  border-radius: 4px;
+  border-radius: 4px 0 0 4px;
+  background-color: #333;
+  color: #E0E0E0;
+}
+
+.input-group button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  background-color: #FFD700;
+  color: #121212;
   cursor: pointer;
-  transition: background-color 0.3s ease;
 }
 
-button:hover {
-  background-color: #218838;
+.input-group button:hover {
+  background-color: #E0B000;
 }
 
+/* Área de resultado */
 .resultado, .logs {
   margin-top: 20px;
 }
 
-h2 {
+.resultado h2, .logs h2 {
   font-size: 20px;
-  font-weight: 400;
   margin-bottom: 10px;
-  color: #555;
-}
-
-#idsExtraidos, #logs {
-  padding: 10px;
-  background-color: #f8f9fa;
-  border: 1px solid #ddd;
-  border-radius: 4px;
+  color: #FFD700;
 }
 
 #idsExtraidos a {
   display: block;
-  margin-bottom: 10px;
-  color: #007bff;
+  margin: 5px 0;
+  color: #FFD700;
   text-decoration: none;
-  transition: color 0.3s ease;
+  word-break: break-all;
 }
 
 #idsExtraidos a:hover {
-  color: #0056b3;
   text-decoration: underline;
 }
 
+/* Botão copiar links */
 #idsExtraidos button {
   margin-top: 10px;
-  background-color: #007bff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  background-color: #FFD700;
+  color: #121212;
+  cursor: pointer;
 }
 
 #idsExtraidos button:hover {
-  background-color: #0056b3;
+  background-color: #E0B000;
+}
+
+/* Logs */
+#logs {
+  margin-top: 20px;
+  padding: 10px;
+  border: 1px solid #FFD700;
+  border-radius: 4px;
+  background-color: #333;
+  color: #E0E0E0;
 }
 
 #logs p {
-  margin: 5px 0;
-  font-size: 14px;
-  color: #666;
+  margin-bottom: 5px;
 }
 
-/* Estilização para a exibição do produto */
-#product-details {
+#logs pre {
+  background-color: #1E1E1E;
+  border: 1px solid #FFD700;
+  border-radius: 4px;
+  padding: 10px;
+}
+
+/* Estilo para a página de visualização do produto */
+body.produto {
+  background-color: #121212;
+  color: #E0E0E0;
+  line-height: 1.6;
   display: flex;
+  justify-content: center;
   align-items: center;
-  gap: 20px;
+  height: 100vh;
+  text-align: center;
   padding: 20px;
-  background: #fff;
+}
+
+.container.produto {
+  max-width: 600px;
+  width: 100%;
+  background-color: #1E1E1E;
+  padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  flex-wrap: wrap;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
-#product-image {
-  width: 150px;
-  height: auto;
-  border-radius: 8px;
-  transition: transform 0.3s ease-in-out;
+h1.produto {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #FFD700;
 }
 
-#product-image:hover {
-  transform: scale(1.05);
+#product-details {
+  margin-top: 20px;
 }
 
-#product-info {
-  flex: 1;
-  min-width: 200px;
-}
-
-#product-name {
-  font-size: 22px;
-  font-weight: 600;
+#product-details h2 {
+  font-size: 20px;
   margin-bottom: 10px;
-  color: #444;
+  color: #FFD700;
 }
 
-#product-creator,
-#product-price,
-#product-id {
-  font-size: 16px;
-  color: #666;
-  margin: 5px 0;
+#product-details p {
+  margin-bottom: 5px;
+  color: #E0E0E0;
 }
 
-/* Responsividade para telas menores */
-@media (max-width: 600px) {
-  #product-details {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  #product-image {
-    width: 100px;
-  }
+#product-details img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
 }
+
+#product-details button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  background-color: #FFD700;
+  color: #121212;
+  cursor: pointer;
+}
+
+#product-details button:hover {
+  background-color: #E0B000;
+} 
